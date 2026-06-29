@@ -1,0 +1,25 @@
+# Data (downloaded separately from OpenSLR — see README; CC BY-NC-SA, not redistributed)
+data/
+
+# Generation output
+output/
+
+# Working/scratch
+temp/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
