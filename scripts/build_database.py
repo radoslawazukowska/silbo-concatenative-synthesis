@@ -9,7 +9,7 @@ end to end and writes the unit database to data/syllables/words-processed/.
 import os
 import shutil
 
-from config import TRANSC_CSV, UNPROCESSED_TRANSC_CSV
+from config import TRANSC_CSV, UNPROCESSED_TRANSC_CSV, PROCESSED_WORDS_CLIPS, SYLLABLE_AUDIO_DIR, SYLLABLE_AUDIO_CLIPS_DIR
 from audio_processing import clean_audio
 from build_syllable_columns import build_syllable_columns
 from audio_syllables_splitting import build_units
@@ -19,6 +19,9 @@ from silfateo import add_silfateo_column
 
 def main():
     os.makedirs(os.path.dirname(TRANSC_CSV), exist_ok=True)
+    os.makedirs(PROCESSED_WORDS_CLIPS, exist_ok=True)
+    os.makedirs(SYLLABLE_AUDIO_DIR, exist_ok=True)
+    os.makedirs(SYLLABLE_AUDIO_CLIPS_DIR, exist_ok=True)
 
     print("[1/5] Cleaning audio (noise reduction and filtering)...")
     clean_audio()

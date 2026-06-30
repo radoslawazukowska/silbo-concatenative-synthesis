@@ -4,7 +4,7 @@ import pandas as pd
 import ast
 import os
 
-from scripts.config import (
+from config import (
     SPEAKER_PARAMS,
     TRANSC_CSV,
     PROCESSED_WORDS_DIR,

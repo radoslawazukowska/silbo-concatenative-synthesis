@@ -46,7 +46,7 @@ pip install -r requirements.txt
 **1. Build the unit database** (run once, after placing the corpus):
 
 ```bash
-cd scripts/ && python build_database.py
+python build_database.py
 ```
 
 This denoises the recordings, adds phonemic and syllabic transcriptions,
@@ -57,7 +57,7 @@ database is written to `data/syllables/words-processed/syllables.csv`.
 **2. Generate audio from text:**
 
 ```bash
-cd scripts/ && python generate_concatenative.py ../examples/sample_input.txt --write-clips
+python generate_concatenative.py ../examples/sample_input.txt --write-clips
 ```
 
 `sample_input.txt` contains one utterance per line. Synthesized clips are written
@@ -86,8 +86,7 @@ to `output/clips/`. Use `--debug` to also export per-utterance selection traces.
 This project uses the Silbo Gomero Speech Corpus (OpenSLR SLR137). If you use
 it, please cite the original work:
 
-```
-bibtex
+```bibtex
 @inproceedings{jakubiak23_interspeech,
     author={Agata Jakubiak},
     title={{Whistle-to-text: Automatic recognition of the Silbo Gomero whistled language}},

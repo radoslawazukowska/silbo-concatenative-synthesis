@@ -14,6 +14,7 @@ TRANSC_CSV = PROCESSED_WORDS_DIR + "transc.csv"  # master transcription table
 
 # --- Syllable-level units (split output) ---
 SYLLABLE_AUDIO_DIR = "data/syllables/words-processed/"  # syllable audio + CSVs
+SYLLABLE_AUDIO_CLIPS_DIR = SYLLABLE_AUDIO_DIR + "clips/"
 DESC_CSV = SYLLABLE_AUDIO_DIR + "desc.csv"  # filtered subset of transc to process
 SYLLABLES_CSV = (
     SYLLABLE_AUDIO_DIR + "syllables.csv"
