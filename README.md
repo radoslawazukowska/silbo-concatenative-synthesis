@@ -52,7 +52,7 @@ python scripts/build_database.py
 This denoises the recordings, adds phonemic and syllabic transcriptions,
 splits each word into syllable units, and computes the unit metadata
 (duration, stress, position, speaker, silfateo class). The resulting unit
-database is written to `data/syllables/words-processed/syllables.csv`.
+database is written to `data/syllables/syllables.csv`.
 
 **2. Generate audio from text:**
 
@@ -80,6 +80,10 @@ to `output/clips/`. Use `--debug` to also export per-utterance selection traces.
 - `generate_concatenative.py` — generation entry point
 - `build_database.py` — database-build entry point
 - `config.py` — data paths and per-speaker parameters
+- `text_processor.py` — converts raw text to phonetic syllables (used at generation time)
+- `text_processing.py` — DataFrame-level helpers for syllabification and phonetic transcription (used during database build)
+- `export_utils.py` — writes per-utterance selection traces and missing-syllable reports to CSV
+- `trace_logger.py` — builds structured trace entries during synthesis for debugging
 
 ## Citing the data
 
