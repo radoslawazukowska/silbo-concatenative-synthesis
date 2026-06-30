@@ -30,12 +30,12 @@ TRACE_DIR = "output/traces/"
 # ============================================================
 # Per-speaker split parameters
 # (minimum silence length in ms, silence threshold in dBFS)
-# Keyed by the speaker name as it appears in the corpus 'author' column.
+# Keyed by the two-digit speaker prefix in the corpus filenames (e.g. "01").
 # ============================================================
 
 SPEAKER_PARAMS = {
-    "Ana Luz Arteaga": {"min_silence_len": 75, "silence_thresh": -13},
-    "Francisco Javier Correa": {"min_silence_len": 60, "silence_thresh": -16},
-    "Juan Manuel Chinea": {"min_silence_len": 66, "silence_thresh": -19},
-    "Silvia Martín": {"min_silence_len": 70, "silence_thresh": -12},
+    "01": {"min_silence_len": 75, "silence_thresh": -13},
+    "02": {"min_silence_len": 60, "silence_thresh": -16},
+    "03": {"min_silence_len": 66, "silence_thresh": -19},
+    "04": {"min_silence_len": 70, "silence_thresh": -12},
 }

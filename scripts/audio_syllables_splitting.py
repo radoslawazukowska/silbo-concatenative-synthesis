@@ -111,9 +111,9 @@ def process_recordings(recordings_dir_in, recordings_dir_out, input_csv, output_
     desc_df["produced_chunks"] = None
 
     for idx in desc_df.index:
-        speaker = desc_df.at[idx, "author"]
         transcription = desc_df.at[idx, "transcription"]
         relative_path = desc_df.at[idx, "path"]
+        speaker = os.path.basename(relative_path).split("-")[0]
         expected_chunks = int(desc_df.at[idx, "num_syl"])
         fon_syllables = desc_df.at[idx, "fonemas_pl_syl"]
         lit_syllables = [x for xs in desc_df.at[idx, "syllables"] for x in xs]

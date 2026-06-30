@@ -44,8 +44,7 @@ def enrich_database():
     # Position of the unit within its source word (from the chunk index).
     df["position"] = df["path"].apply(extract_position)
 
-    # Integer speaker id derived from the author name.
-    df["speaker_id"] = df["author"].astype("category").cat.codes
+    df["speaker_id"] = df["author"].astype(int)
     df.to_csv(SYLLABLES_CSV, index=False)
 
 
