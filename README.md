@@ -101,6 +101,12 @@ it, please cite the original work:
 }
 ```
 
+## Authors
+- Radosława Żukowska
+- Fernando Ramos López
+- Mateo Cámara
+- Klara Borowa
+
 ## License
 
 Code in this repository is released under the **MIT License** (see `LICENSE`).
